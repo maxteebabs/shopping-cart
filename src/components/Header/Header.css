@@ -1,14 +1,13 @@
-.banner {
+.banner{
   background-color: #131921;
   height: 60px;
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
   padding-left: 20px;
   align-items: center;
 }
 
-.logo {
+.logo{
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;

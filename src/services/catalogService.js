@@ -5,5 +5,5 @@ const getCatalogs = () => {
 }
 
 export const catalogService = {
-  getCatalogs,
-};
+  getCatalogs
+}

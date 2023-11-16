@@ -1,21 +1,21 @@
 import './Styles.css';
-import Header from './components/Header/Header';
-import Sidebar from './components/Sidebar/Sidebar';
-import Catalogs from './components/Catalogs/Catalogs';
-import useCatalogHook from './hooks/useCatalogHook';
+
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Catalogs from "./components/Catalogs/Catalogs";
+import useCatalogHooks from "./hooks/useCatalogHooks";
 
 function App() {
-  const { catalogs } = useCatalogHook();
-  return (
-   <>
-    <Header />
-    <div className='wrapper'>
-      <Sidebar catalogs={catalogs} />
-      <Catalogs catalogs={catalogs} />
-    </div>
-    
-   </>
-  );
-}
+const { catalogs, filterByBrands, defaultBrands, handlePriceFilter} = useCatalogHooks();
 
+  return(
+    <>
+      <Header />
+      <div className="wrapper">
+        <Sidebar catalogs={catalogs} filterByBrands={filterByBrands} defaultBrands={defaultBrands} handlePriceFilter={handlePriceFilter} />
+        <Catalogs catalogs={catalogs} />
+      </div>
+    </>
+  )
+} 
 export default App;
