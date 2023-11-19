@@ -66,8 +66,7 @@
   color: #ffa41c;
 }
 
-.catalog.ratings:last-child {
-  color: #ffa41c;
+.catalog .ratings span:last-child {
   font-weight: 500;
 }
 

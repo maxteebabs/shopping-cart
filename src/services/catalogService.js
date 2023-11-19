@@ -1,7 +1,9 @@
 import data from '../data.json';
 
 const getCatalogs = () => {
-  return Promise.resolve(data);
+  return new Promise((resolve, reject) => {
+    resolve(data);
+  });
 }
 
 export const catalogService = {
